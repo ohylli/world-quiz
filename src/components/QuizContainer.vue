@@ -49,7 +49,7 @@ const handleAnswer = (answerIndex) => {
     } else {
       isQuizComplete.value = true
     }
-  }, 1000)
+  }, 3000)
 }
 
 const restartQuiz = () => {
