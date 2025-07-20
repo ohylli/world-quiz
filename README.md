@@ -15,7 +15,9 @@ A simple, interactive geography quiz web application built with Vue 3 and Vite. 
 
 ## Demo
 
-To see the quiz in action, run the development server (see instructions below).
+The quiz is live at: https://ohylli.github.io/world-quiz/
+
+You can also run it locally using the development server (see instructions below).
 
 ## Tech Stack
 
@@ -110,6 +112,10 @@ To add new questions, edit the `src/data/questions.js` file. Each question shoul
   category: "category-name"
 }
 ```
+
+## Deployment
+
+The application is automatically deployed to GitHub Pages when changes are pushed to the main branch. The deployment workflow uses GitHub Actions to build and publish the site.
 
 ## Contributing
 

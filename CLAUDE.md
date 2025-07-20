@@ -14,6 +14,10 @@ npm run build    # Create production build in dist/
 npm run preview  # Preview production build
 ```
 
+## Deployment
+
+The application is deployed to GitHub Pages at https://ohylli.github.io/world-quiz/. Deployment happens automatically via GitHub Actions when changes are pushed to the main branch. The workflow is defined in `.github/workflows/deploy.yml`.
+
 ## Architecture & Key Components
 
 ### Component Structure
