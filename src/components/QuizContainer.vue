@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import QuestionCard from './QuestionCard.vue'
 import ScoreBoard from './ScoreBoard.vue'
 import ResultScreen from './ResultScreen.vue'
+import ScreenReaderAnnouncer from './ScreenReaderAnnouncer.vue'
 import { questions } from '../data/questions.js'
 
 const emit = defineEmits(['quiz-complete'])
@@ -12,6 +13,7 @@ const score = ref(0)
 const selectedAnswers = ref([])
 const isQuizComplete = ref(false)
 const shuffledQuestions = ref([])
+const announcementMessage = ref('')
 
 const shuffleArray = (array) => {
   const newArray = [...array]
@@ -41,6 +43,9 @@ const handleAnswer = (answerIndex) => {
   
   if (answerIndex === currentQuestion.value.correct) {
     score.value++
+    announcementMessage.value = 'Correct! Well done!'
+  } else {
+    announcementMessage.value = `Incorrect. The correct answer is: ${currentQuestion.value.options[currentQuestion.value.correct]}`
   }
   
   setTimeout(() => {
@@ -59,6 +64,8 @@ const restartQuiz = () => {
 
 <template>
   <div class="quiz-container">
+    <ScreenReaderAnnouncer :message="announcementMessage" />
+    
     <ScoreBoard 
       v-if="!isQuizComplete"
       :score="score"
