@@ -22,7 +22,9 @@ const resetQuiz = () => {
     <main>
       <div v-if="!isQuizActive" class="welcome">
         <h2>Test Your Geography Knowledge!</h2>
-        <p>Answer questions about capitals, countries, and more.</p>
+        <p>Answer questions about capitals, countries, and more.
+          View source code on <a href="https://github.com/ohylli/world-quiz/">Github</a>.
+        </p>
         <button @click="startQuiz" class="start-button">Start Quiz</button>
       </div>
       
