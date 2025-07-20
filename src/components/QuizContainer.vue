@@ -49,11 +49,14 @@ const handleAnswer = (answerIndex) => {
   }
   
   setTimeout(() => {
-    if (currentQuestionIndex.value < shuffledQuestions.value.length - 1) {
+    if (currentQuestionIndex.value < shuffledQuestions.value.length - 1) {      
       currentQuestionIndex.value++
     } else {
       isQuizComplete.value = true
     }
+
+    // Clear after announcement to allow same message to be announced again
+    announcementMessage.value = ''
   }, 3000)
 }
 
