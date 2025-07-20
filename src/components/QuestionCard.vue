@@ -38,7 +38,7 @@ const getButtonClass = (index) => {
 
 <template>
   <div class="question-card">
-    <h2 class="question-text">{{ question.question }}</h2>
+    <h2 class="question-text" role="alert" aria-live="assertive" aria-atomic="true">{{ question.question }}</h2>
     
     <div class="options-grid">
       <button
