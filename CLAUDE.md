@@ -21,6 +21,7 @@ npm run preview  # Preview production build
 - **QuestionCard.vue** - Displays individual questions and handles answer selection
 - **ScoreBoard.vue** - Shows current score and progress through the quiz
 - **ResultScreen.vue** - Displays final results with score percentage
+- **ScreenReaderAnnouncer.vue** - Provides screen reader announcements for answer feedback
 - **App.vue** - Root component with welcome screen and quiz container mounting
 
 ### State Management
@@ -32,8 +33,9 @@ npm run preview  # Preview production build
 1. Questions are imported from `src/data/questions.js` 
 2. QuizContainer randomly selects 10 questions when quiz starts
 3. User answers are validated immediately with visual feedback
-4. Score is tracked and displayed in real-time
-5. Results screen shows final score and allows restart
+4. Answer feedback is announced to screen readers via ScreenReaderAnnouncer
+5. Score is tracked and displayed in real-time
+6. Results screen shows final score and allows restart
 
 ## Adding/Modifying Questions
 
@@ -47,6 +49,12 @@ Questions are stored in `src/data/questions.js`. Format:
   category: "category-name"
 }
 ```
+
+## Accessibility Features
+
+- **ScreenReaderAnnouncer** component provides live region announcements
+- Answer feedback is automatically announced to screen readers
+- The `.sr-only` utility class in `style.css` hides content visually while keeping it accessible
 
 ## Important Notes
 

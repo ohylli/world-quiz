@@ -11,6 +11,7 @@ A simple, interactive geography quiz web application built with Vue 3 and Vite. 
 - 💯 **Instant Feedback** - Know immediately if your answer is correct
 - 📱 **Responsive Design** - Works seamlessly on desktop and mobile devices
 - 🎨 **Clean, Modern UI** - Simple and intuitive interface
+- ♿ **Accessible** - Screen reader support for answer feedback
 
 ## Demo
 
@@ -28,15 +29,16 @@ To see the quiz in action, run the development server (see instructions below).
 world-quiz/
 ├── src/
 │   ├── components/
-│   │   ├── QuizContainer.vue    # Main quiz logic and state management
-│   │   ├── QuestionCard.vue     # Individual question display
-│   │   ├── ScoreBoard.vue       # Score and progress tracking
-│   │   └── ResultScreen.vue     # Final quiz results
+│   │   ├── QuizContainer.vue        # Main quiz logic and state management
+│   │   ├── QuestionCard.vue         # Individual question display
+│   │   ├── ScoreBoard.vue           # Score and progress tracking
+│   │   ├── ResultScreen.vue         # Final quiz results
+│   │   └── ScreenReaderAnnouncer.vue # Accessibility announcements
 │   ├── data/
-│   │   └── questions.js         # Question database
-│   ├── App.vue                  # Root component
-│   ├── main.js                  # Application entry point
-│   └── style.css                # Global styles
+│   │   └── questions.js             # Question database
+│   ├── App.vue                      # Root component
+│   ├── main.js                      # Application entry point
+│   └── style.css                    # Global styles
 ├── index.html
 ├── package.json
 └── vite.config.js
